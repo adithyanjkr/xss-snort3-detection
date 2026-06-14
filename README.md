@@ -24,7 +24,7 @@ A minimal proof-of-concept lab demonstrating real-time detection of Cross-Site S
 
 ## 🖼️ Attack Simulation Screenshot
 
-* **XSS_browser_trigger.png**
+/screenshots/XSS_browser_trigger.png
 
 ## 🚨 Captured IDS Alerts
 

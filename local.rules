@@ -1,0 +1,15 @@
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+
+
+alert tcp any any -> any any (msg:"XSS-RAW: Generic Script Keyword Detected"; content:"script", nocase; sid:999999; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: Classic Opening Script Tag"; flow:to_server,established; http_uri; content:"<script>", nocase; sid:1000001; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: Classic Closing Script Tag"; flow:to_server,established; http_uri; content:"</script>", nocase; sid:1000002; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: HTML Event Handler Attribute"; flow:to_server,established; http_uri; pcre:"/<[^>]*\b(on[a-z]+)\s*=/i"; sid:1000003; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: Javascript Protocol URI Scheme"; flow:to_server,established; http_uri; content:"javascript:", nocase; sid:1000004; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: Dangerous JS Function Call"; flow:to_server,established; http_uri; pcre:"/(alert|prompt|confirm|eval)\s*\(.*?\)/i"; sid:1000005; rev:1;)
+alert tcp any any -> any [8080,8081] (msg:"XSS-HTTP: Script Tag Injected into POST Body"; flow:to_server,established; http_client_body; content:"<script>", nocase; sid:1000006; rev:1;)

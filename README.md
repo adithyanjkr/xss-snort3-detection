@@ -33,6 +33,10 @@ Snort instantaneously matches the request payload buffers on the loopback stream
 06/04-15:04:09.255324 [**] [1:999999:1] "XSS-RAW: Generic Script Keyword Detected" [**] [Priority: 0] [TCP] 192.168.1.4:48564 -> 192.168.1.4:8080
 06/04-15:04:09.255324 [**] [1:1000006:1] "XSS-HTTP: Script Tag Injected into POST Body" [**] [Priority: 0] [TCP] 192.168.1.4:48564 -> 192.168.1.4:8080
 
+## 🖼️ Snort Detection Log Screenshot
+
+![Snort Terminal Alerts](screenshots/Snort3_alert_output.png)
+
 ## 🛠️ How to Fix It
 
 1. **Secure Coding:** Remove the explicit | safe engine modifiers to fallback on Flask's automatic context-aware HTML entity-escaping rules (&lt; and &gt;).

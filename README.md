@@ -33,8 +33,8 @@ Snort instantaneously matches the request payload buffers on the loopback stream
 
 ## 🛠️ How to Fix It
 
-1. Secure Coding: Remove the explicit | safe engine modifiers to fallback on Flask's automatic context-aware HTML entity-escaping rules (&lt; and &gt;).
+1. **Secure Coding:** Remove the explicit | safe engine modifiers to fallback on Flask's automatic context-aware HTML entity-escaping rules (&lt; and &gt;).
 
-2. Network inline Blocking: Migrate your local Snort tracking orchestration parameters from standard passive alert flags to active drop rule configurations to mitigate incoming exploits at the network adapter block.
+2. **Network inline Blocking:** Migrate your local Snort tracking orchestration parameters from standard passive alert flags to active drop rule configurations to mitigate incoming exploits at the network adapter block.
 
 ## 👤 Author - Adithyan.V

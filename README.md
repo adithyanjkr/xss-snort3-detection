@@ -22,7 +22,8 @@ A minimal proof-of-concept lab demonstrating real-time detection of Cross-Site S
 
    <script>alert('JKR')</script>
 
-3. The malicious script reflects directly onto the application viewport, triggering a browser client-side execution popup window.
+## 🖼️ Attack Simulation Screenshot
+- screenshort
 
 ## 🚨 Captured IDS Alerts
 

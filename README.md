@@ -23,7 +23,8 @@ A minimal proof-of-concept lab demonstrating real-time detection of Cross-Site S
    <script>alert('JKR')</script>
 
 ## 🖼️ Attack Simulation Screenshot
-- screenshort
+
+* **XSS_browser_trigger.png**
 
 ## 🚨 Captured IDS Alerts
 

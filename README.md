@@ -6,8 +6,9 @@ A minimal proof-of-concept lab demonstrating real-time detection of Cross-Site S
 
 ## 📌 Architecture Setup
 
-**Offensive Component:** A local Python Flask application (`app.py`) running over port `8080`. It mimics a community feedback board and is intentionally left vulnerable to Reflected XSS by processing user payloads using Jinja2's unsanitized `| safe` evaluation filter.
-**Defensive Component:** A **Snort 3** IDS instance actively sniffing the local loopback adapter interface (`lo`), matching raw HTTP string packet sequences against custom-tailored signature templates.
+**Offensive Component:**  A local Python Flask application (`app.py`) running over port `8080`. It mimics a community feedback board and is intentionally left vulnerable to Reflected XSS by processing user payloads using Jinja2's unsanitized `| safe` evaluation filter.
+
+**Defensive Component:**  A **Snort 3** IDS instance actively sniffing the local loopback adapter interface (`lo`), matching raw HTTP string packet sequences against custom-tailored signature templates.
 
 ---
 
